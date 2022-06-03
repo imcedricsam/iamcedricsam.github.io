@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Subject</title>
-
-    <!-- font awesome cdn link  -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <style>
@@ -179,10 +178,6 @@ button {
     font-weight: bold;
     padding-top: 1vw;
 }
-
-    </style>
-
-</head>
 <body>
 <section class="home" id="home">
 
@@ -240,5 +235,703 @@ button {
     </div>
 
 </section>
+    <!DOCTYPE html>
+<html lang="eng">
+<head>
+<style>
+ul { 
+list-style-type: none;
+}
+</style>
+</head>
+<body>
+<div>
+<button onclick="c1add()" id="c1add">add to cart c1</button>
+<button onclick="c2add()" id="c2add">add to cart c2</button>
+<button onclick="c3add()" id="c3add">add to cart c3</button>
+<button onclick="c4add()" id="c4add">add to cart c4</button>
+<button onclick="c5add()" id="c5add">add to cart c5</button>
+<button onclick="c6add()" id="c6add">add to cart c6</button>
+</div>
+
+<div>
+<button onclick="a1add()" id="a1add">add to cart a1</button>
+<button onclick="a2add()" id="a2add">add to cart a2</button>
+<button onclick="a3add()" id="a3add">add to cart a3</button>
+<button onclick="a4add()" id="a4add">add to cart a4</button>
+<button onclick="a5add()" id="a5add">add to cart a5</button>
+<button onclick="a6add()" id="a6add">add to cart a6</button>
+</div>
+
+<div>
+<button onclick="b1add()" id="b1add">add to cart b1</button>
+<button onclick="b2add()" id="b2add">add to cart b2</button>
+<button onclick="b3add()" id="b3add">add to cart b3</button>
+<button onclick="b4add()" id="b4add">add to cart b4</button>
+<button onclick="b5add()" id="b5add">add to cart b5</button>
+<button onclick="b6add()" id="b6add">add to cart b6</button>
+</div>
+
+<div>
+<button onclick="d1add()" id="d1add">add to cart d1</button>
+<button onclick="d2add()" id="d2add">add to cart d2</button>
+<button onclick="d3add()" id="d3add">add to cart d3</button>
+<button onclick="d4add()" id="d4add">add to cart d4</button>
+<button onclick="d5add()" id="d5add">add to cart d5</button>
+<button onclick="d6add()" id="d6add">add to cart d6</button>
+</div>
+<ul id="cart">
+</ul>
+<div>
+Total: <span id="total"></span>
+</div>
+<form action="http://sirjm.infinity freeapp.com/checkout.php" method="GET">
+<div>
+<label>Name:</label>
+<input type="text" name="cust_name">
+</div>
+<div>
+<label>Email:</label>
+<input type="text" name="cust_email">
+</div>
+<div>
+<label>Delivery Address:</label>
+<input type="text" name="cust_addr">
+</div>
+<input type="text" name="cust_order" id="order">
+<input type="submit" value="submit" onclick="submi()">
+</form>
+<script>
+var order = [];
+
+var c1s = 1
+var c1 = {
+    prod_name: "cool car",
+	prod_price: 200000
+	};
+	
+var c2s = 1
+var c2 = {
+    prod_name: "cool car2",
+	prod_price: 100000
+	};	
+	
+var c3s = 1
+var c3 = {
+    prod_name: "cool car3",
+	prod_price: 300000
+	};
+	
+var c6s = 1
+var c6 = {
+    prod_name: "cool car6",
+	prod_price: 400000
+	};
+	
+var c4s = 1
+var c4 = {
+    prod_name: "cool car4",
+	prod_price: 500000
+	};	
+	
+var c5s = 1
+var c5 = {
+    prod_name: "cool car5",
+	prod_price: 600000
+	};
+
+var a1s = 1
+var a1 = {
+    prod_name: "cool cat",
+	prod_price: 20000
+	};
+	
+var a2s = 1
+var a2 = {
+    prod_name: "cool cat2",
+	prod_price: 10000
+	};	
+	
+var a3s = 1
+var a3 = {
+    prod_name: "cool cat3",
+	prod_price: 30000
+	};
+	
+var a4s = 1
+var a4 = {
+    prod_name: "cool cat4",
+	prod_price: 40000
+	};
+	
+var a5s = 1
+var a5 = {
+    prod_name: "cool cat5",
+	prod_price: 60000
+	};	
+	
+var a6s = 1
+var a6 = {
+    prod_name: "cool cat6",
+	prod_price: 50000
+	};
+/*gap*/
+var b1s = 1
+var b1 = {
+    prod_name: "cool hat",
+	prod_price: 2000
+	};
+	
+var b2s = 1
+var b2 = {
+    prod_name: "cool hat2",
+	prod_price: 1000
+	};	
+	
+var b3s = 1
+var b3 = {
+    prod_name: "cool hat3",
+	prod_price: 3000
+	};
+	
+var b4s = 1
+var b4 = {
+    prod_name: "cool hat4",
+	prod_price: 4000
+	};
+	
+var b5s = 1
+var b5 = {
+    prod_name: "cool hat5",
+	prod_price: 6000
+	};	
+	
+var b6s = 1
+var b6 = {
+    prod_name: "cool hat6",
+	prod_price: 5000
+	};
+	
+var d1s = 1
+var d1 = {
+    prod_name: "cool hay",
+	prod_price: 200
+	};
+	
+var d2s = 1
+var d2 = {
+    prod_name: "cool hay2",
+	prod_price: 100
+	};	
+	
+var d3s = 1
+var d3 = {
+    prod_name: "cool hay3",
+	prod_price: 300
+	};
+	
+var d4s = 1
+var d4 = {
+    prod_name: "cool hay4",
+	prod_price: 400
+	};
+	
+var d5s = 1
+var d5 = {
+    prod_name: "cool hay5",
+	prod_price: 600
+	};	
+	
+var d6s = 1
+var d6 = {
+    prod_name: "cool hay6",
+	prod_price: 500
+	};
+var total = 0
+document.getElementById("total").innerHTML = total;
+
+    function c1add(){
+document.getElementById("cart").innerHTML += "<li id='c1' onclick='c1rmv()'>cool car<br>price: P 200000 (click this to remove)</li>";
+        document.getElementById("c1add").disabled = true;
+        total += 200000
+        document.getElementById("total").innerHTML = total;
+		c1s = 0
+}
+
+    function c2add(){
+document.getElementById("cart").innerHTML += "<li id='c2' onclick='c2rmv()'>cool car2<br>price: P 100000 (click this to remove)</li>";
+        document.getElementById("c2add").disabled = true;
+        total += 100000
+        document.getElementById("total").innerHTML = total;
+		c2s = 0
+}
+
+    function c3add(){
+document.getElementById("cart").innerHTML += "<li id='c3' onclick='c3rmv()'>cool car3<br>price: P 300000 (click this to remove)</li>";
+        document.getElementById("c3add").disabled = true;
+        total += 300000
+        document.getElementById("total").innerHTML = total;
+		c3s = 0
+}
+
+function c4add(){
+document.getElementById("cart").innerHTML += "<li id='c4' onclick='c4rmv()'>cool car4<br>price: P 500000 (click this to remove)</li>";
+        document.getElementById("c4add").disabled = true;
+        total += 500000
+        document.getElementById("total").innerHTML = total;
+		c4s = 0
+}
+
+    function c5add(){
+document.getElementById("cart").innerHTML += "<li id='c5' onclick='c5rmv()'>cool car5<br>price: P 600000 (click this to remove)</li>";
+        document.getElementById("c5add").disabled = true;
+        total += 600000
+        document.getElementById("total").innerHTML = total;
+		c5s = 0
+}
+
+    function c6add(){
+document.getElementById("cart").innerHTML += "<li id='c6' onclick='c6rmv()'>cool car6<br>price: P 400000 (click this to remove)</li>";
+        document.getElementById("c6add").disabled = true;
+        total += 400000
+        document.getElementById("total").innerHTML = total;
+		c6s = 0
+}
+/*gap*/
+function a1add(){
+document.getElementById("cart").innerHTML += "<li id='a1' onclick='a1rmv()'>cool cat<br>price: P 20000 (click this to remove)</li>";
+        document.getElementById("a1add").disabled = true;
+        total += 20000
+        document.getElementById("total").innerHTML = total;
+		a1s = 0
+}
+
+    function a2add(){
+document.getElementById("cart").innerHTML += "<li id='a2' onclick='a2rmv()'>cool cat2<br>price: P 10000 (click this to remove)</li>";
+        document.getElementById("a2add").disabled = true;
+        total += 10000
+        document.getElementById("total").innerHTML = total;
+		a2s = 0
+}
+
+    function a3add(){
+document.getElementById("cart").innerHTML += "<li id='a3' onclick='a3rmv()'>cool cat3<br>price: P 30000 (click this to remove)</li>";
+        document.getElementById("a3add").disabled = true;
+        total += 30000
+        document.getElementById("total").innerHTML = total;
+		a3s = 0
+}
+
+function a4add(){
+document.getElementById("cart").innerHTML += "<li id='a4' onclick='a4rmv()'>cool cat4<br>price: P 40000 (click this to remove)</li>";
+        document.getElementById("a4add").disabled = true;
+        total += 40000
+        document.getElementById("total").innerHTML = total;
+		a4s = 0
+}
+
+    function a5add(){
+document.getElementById("cart").innerHTML += "<li id='a5' onclick='a5rmv()'>cool cat5<br>price: P 60000 (click this to remove)</li>";
+        document.getElementById("a5add").disabled = true;
+        total += 60000
+        document.getElementById("total").innerHTML = total;
+		a5s = 0
+}
+
+    function a6add(){
+document.getElementById("cart").innerHTML += "<li id='a6' onclick='a6rmv()'>cool cat6<br>price: P 50000 (click this to remove)</li>";
+        document.getElementById("a6add").disabled = true;
+        total += 50000
+        document.getElementById("total").innerHTML = total;
+		a6s = 0
+}
+
+function b1add(){
+document.getElementById("cart").innerHTML += "<li id='b1' onclick='b1rmv()'>cool hat<br>price: P 2000 (click this to remove)</li>";
+        document.getElementById("b1add").disabled = true;
+        total += 2000
+        document.getElementById("total").innerHTML = total;
+		b1s = 0
+}
+
+    function b2add(){
+document.getElementById("cart").innerHTML += "<li id='b2' onclick='b2rmv()'>cool hat2<br>price: P 1000 (click this to remove)</li>";
+        document.getElementById("b2add").disabled = true;
+        total += 1000
+        document.getElementById("total").innerHTML = total;
+		b2s = 0
+}
+
+    function b3add(){
+document.getElementById("cart").innerHTML += "<li id='b3' onclick='b3rmv()'>cool hat3<br>price: P 3000 (click this to remove)</li>";
+        document.getElementById("b3add").disabled = true;
+        total += 3000
+        document.getElementById("total").innerHTML = total;
+		b3s = 0
+}
+
+function b4add(){
+document.getElementById("cart").innerHTML += "<li id='b4' onclick='b4rmv()'>cool hat4<br>price: P 4000 (click this to remove)</li>";
+        document.getElementById("b4add").disabled = true;
+        total += 4000
+        document.getElementById("total").innerHTML = total;
+		b4s = 0
+}
+
+    function b5add(){
+document.getElementById("cart").innerHTML += "<li id='b5' onclick='b5rmv()'>cool hat5<br>price: P 6000 (click this to remove)</li>";
+        document.getElementById("b5add").disabled = true;
+        total += 6000
+        document.getElementById("total").innerHTML = total;
+		b5s = 0
+}
+
+    function b6add(){
+document.getElementById("cart").innerHTML += "<li id='b6' onclick='b6rmv()'>cool hat6<br>price: P 5000 (click this to remove)</li>";
+        document.getElementById("b6add").disabled = true;
+        total += 5000
+        document.getElementById("total").innerHTML = total;
+		b6s = 0
+}
+
+function d1add(){
+document.getElementById("cart").innerHTML += "<li id='d1' onclick='d1rmv()'>cool hay<br>price: P 200 (click this to remove)</li>";
+        document.getElementById("d1add").disabled = true;
+        total += 200
+        document.getElementById("total").innerHTML = total;
+		d1s = 0
+}
+
+    function d2add(){
+document.getElementById("cart").innerHTML += "<li id='d2' onclick='d2rmv()'>cool hay2<br>price: P 100 (click this to remove)</li>";
+        document.getElementById("d2add").disabled = true;
+        total += 100
+        document.getElementById("total").innerHTML = total;
+		d2s = 0
+}
+
+    function d3add(){
+document.getElementById("cart").innerHTML += "<li id='d3' onclick='d3rmv()'>cool hay3<br>price: P 300 (click this to remove)</li>";
+        document.getElementById("d3add").disabled = true;
+        total += 300
+        document.getElementById("total").innerHTML = total;
+		d3s = 0
+}
+
+function d4add(){
+document.getElementById("cart").innerHTML += "<li id='d4' onclick='d4rmv()'>cool hay4<br>price: P 400 (click this to remove)</li>";
+        document.getElementById("d4add").disabled = true;
+        total += 400
+        document.getElementById("total").innerHTML = total;
+		d4s = 0
+}
+
+    function d5add(){
+document.getElementById("cart").innerHTML += "<li id='d5' onclick='d5rmv()'>cool hay5<br>price: P 600 (click this to remove)</li>";
+        document.getElementById("d5add").disabled = true;
+        total += 600
+        document.getElementById("total").innerHTML = total;
+		d5s = 0
+}
+
+    function d6add(){
+document.getElementById("cart").innerHTML += "<li id='d6' onclick='d6rmv()'>cool hay6<br>price: P 500 (click this to remove)</li>";
+        document.getElementById("d6add").disabled = true;
+        total += 500
+        document.getElementById("total").innerHTML = total;
+		d6s = 0
+}
+/*gap*/
+    function c1rmv(){
+document.getElementById("c1").innerHTML = "";
+ c1s = 1
+document.getElementById("c1add").disabled = false;
+        total -= 200000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function c2rmv(){
+document.getElementById("c2").innerHTML = "";
+ c2s = 1
+document.getElementById("c2add").disabled = false;
+        total -= 100000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function c3rmv(){
+document.getElementById("c3").innerHTML = "";
+ c3s = 1
+document.getElementById("c3add").disabled = false;
+        total -= 300000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function c4rmv(){
+document.getElementById("c4").innerHTML = "";
+ c4s = 1
+document.getElementById("c4add").disabled = false;
+        total -= 500000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function c5rmv(){
+document.getElementById("c5").innerHTML = "";
+ c5s = 1
+document.getElementById("c5add").disabled = false;
+        total -= 600000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function c6rmv(){
+document.getElementById("c6").innerHTML = "";
+ c6s = 1
+document.getElementById("c6add").disabled = false;
+        total -= 400000
+        document.getElementById("total").innerHTML = total;
+	}
+/*gap*/
+function a1rmv(){
+document.getElementById("a1").innerHTML = "";
+ a1s = 1
+document.getElementById("a1add").disabled = false;
+        total -= 20000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function a2rmv(){
+document.getElementById("a2").innerHTML = "";
+ a2s = 1
+document.getElementById("a2add").disabled = false;
+        total -= 10000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function a3rmv(){
+document.getElementById("a3").innerHTML = "";
+ a3s = 1
+document.getElementById("a3add").disabled = false;
+        total -= 30000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function a4rmv(){
+document.getElementById("a4").innerHTML = "";
+ a4s = 1
+document.getElementById("a4add").disabled = false;
+        total -= 40000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function a5rmv(){
+document.getElementById("a5").innerHTML = "";
+ a5s = 1
+document.getElementById("a5add").disabled = false;
+        total -= 60000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function a6rmv(){
+document.getElementById("a6").innerHTML = "";
+ a6s = 1
+document.getElementById("a6add").disabled = false;
+        total -= 50000
+        document.getElementById("total").innerHTML = total;
+	}
+/*gap*/
+function b1rmv(){
+document.getElementById("b1").innerHTML = "";
+ b1s = 1
+document.getElementById("b1add").disabled = false;
+        total -= 2000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function b2rmv(){
+document.getElementById("b2").innerHTML = "";
+ b2s = 1
+document.getElementById("b2add").disabled = false;
+        total -= 1000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function b3rmv(){
+document.getElementById("b3").innerHTML = "";
+ b3s = 1
+document.getElementById("b3add").disabled = false;
+        total -= 3000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function b4rmv(){
+document.getElementById("b4").innerHTML = "";
+ b4s = 1
+document.getElementById("b4add").disabled = false;
+        total -= 4000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function b5rmv(){
+document.getElementById("b5").innerHTML = "";
+ b5s = 1
+document.getElementById("b5add").disabled = false;
+        total -= 6000
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function b6rmv(){
+document.getElementById("b6").innerHTML = "";
+ b6s = 1
+document.getElementById("b6add").disabled = false;
+        total -= 5000
+        document.getElementById("total").innerHTML = total;
+	}
+/*gap*/
+function d1rmv(){
+document.getElementById("d1").innerHTML = "";
+ d1s = 1
+document.getElementById("d1add").disabled = false;
+        total -= 200
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function d2rmv(){
+document.getElementById("d2").innerHTML = "";
+ d2s = 1
+document.getElementById("d2add").disabled = false;
+        total -= 100
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function d3rmv(){
+document.getElementById("d3").innerHTML = "";
+ d3s = 1
+document.getElementById("d3add").disabled = false;
+        total -= 300
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function d4rmv(){
+document.getElementById("d4").innerHTML = "";
+ d4s = 1
+document.getElementById("d4add").disabled = false;
+        total -= 400
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function d5rmv(){
+document.getElementById("d5").innerHTML = "";
+ d5s = 1
+document.getElementById("d5add").disabled = false;
+        total -= 600
+        document.getElementById("total").innerHTML = total;
+	}
+	
+    function d6rmv(){
+document.getElementById("d6").innerHTML = "";
+ d6s = 1
+document.getElementById("d6add").disabled = false;
+        total -= 500
+        document.getElementById("total").innerHTML = total;
+	}
+
+	function submi(){
+	    if (c1s == 0) {
+	        order.push(c1);
+	    }
+		
+	    if (c2s == 0) {
+	        order.push(c2);
+	    }
+		
+	    if (c3s == 0) {
+	        order.push(c3);
+	    }
+	    if (c4s == 0) {
+	        order.push(c4);
+	    }
+		
+	    if (c5s == 0) {
+	        order.push(c5);
+	    }
+		
+	    if (c6s == 0) {
+	        order.push(c6);
+	    }
+/*gap*/
+	    if (a1s == 0) {
+	        order.push(a1);
+	    }
+		
+	    if (a2s == 0) {
+	        order.push(a2);
+	    }
+		
+	    if (a3s == 0) {
+	        order.push(a3);
+	    }
+	    if (a4s == 0) {
+	        order.push(a4);
+	    }
+		
+	    if (a5s == 0) {
+	        order.push(a5);
+	    }
+		
+	    if (a6s == 0) {
+	        order.push(a6);
+	    }
+/*gap*/
+	    if (b1s == 0) {
+	        order.push(b1);
+	    }
+		
+	    if (b2s == 0) {
+	        order.push(b2);
+	    }
+		
+	    if (b3s == 0) {
+	        order.push(b3);
+	    }
+	    if (b4s == 0) {
+	        order.push(b4);
+	    }
+		
+	    if (b5s == 0) {
+	        order.push(b5);
+	    }
+		
+	    if (b6s == 0) {
+	        order.push(b6);
+	    }
+/*gap*/
+	    if (d1s == 0) {
+	        order.push(d1);
+	    }
+		
+	    if (d2s == 0) {
+	        order.push(d2);
+	    }
+		
+	    if (d3s == 0) {
+	        order.push(d3);
+	    }
+	    if (d4s == 0) {
+	        order.push(d4);
+	    }
+		
+	    if (d5s == 0) {
+	        order.push(d5);
+	    }
+		
+	    if (d6s == 0) {
+	        order.push(d6);
+	    }
+/*gap*/
+		var ordstring = JSON.stringify(order);
+		document.getElementById("order").value = ordstring;
+	}
+</script>
+</body>
+</html>
 </body>
 </html>
