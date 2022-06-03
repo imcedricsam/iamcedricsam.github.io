@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Subject</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        :root{
+        --orange: #FFA500;
+        }
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: Verdana;
+    transition: 0.15s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6vw;
+    overflow-x: hidden;
+}
+
+section{
+    padding:2vw 9%;
+}
+a {
+  text-decoration: none;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4vw;
+    padding:1vw;
+    margin:2vw 0;
+    background:rgba(160, 160, 160,.05);
+}
+
+.heading span{
+    color:var(--orange);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1vw;
+    border-radius: 5vw;
+    background:#333;
+    color:#fff;
+    padding:.9vw 3.5vw;
+    cursor: pointer;
+    font-size: 1.7vw;
+}
+
+.btn:hover{
+    background:var(--orange);
+}
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(176,224,230,1);
+}
+
+.home .content{
+    max-width: 50vw;
+}
+
+.home .content h3{
+    font-size: 6vw;
+    color:#333;
+}
+
+.home .content span{
+    font-size: 3.5vw;
+    color:var(--orange);
+    padding:1vw 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5vw;
+    color:#999;
+    padding:1vw 0;
+    line-height: 1.5;
+}
+.icons-container{
+    background:#eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+.icons-container .icons{
+    background:#fff;
+    border:.1vw solid rgba(0,0,0,.1);
+    padding:2vw;
+    display: flex;
+    align-items: center;
+    flex:1 1 25vw;
+}
+
+.icons-container .icons img{
+    height:5vw;
+    margin-right: 2vw;
+}
+
+.icons-container .icons h3{
+    color:#333;
+    padding-bottom: .5vw;
+    font-size: 1.5vw;
+}
+
+.icons-container .icons span{
+    color:#555;
+    font-size: 1.3vw;
+}
+
+.Items .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5vw;
+}
+
+.Items .box-container .box{
+    flex:1 1 30vw;
+    box-shadow: 0 1vw 2vw rgba(0,0,0,.1);
+    border-radius: .5vw;
+    border:.1vw solid rgba(0,0,0,.1);
+    position: relative;    
+}
+.Items .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2vw;
+    overflow:hidden;
+}
+
+.Items .box-container .box .image img{
+    height:25vw;
+}
+
+.Items .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.Items .box-container .box .image .icons{
+    position: absolute;
+    bottom:-7vw; left:0; right:0;
+    display: flex;
+}
+
+.Items .box-container .box:hover .image .icons{
+    bottom:0;
+}
+
+.Items .box-container .box .image .icons a{
+    height: 5vw;
+    line-height: 5vw;
+    font-size: 2vw;
+    width:50%;
+    background:var(--orange);
+    color:#fff;
+}
+
+.Items .box-container .box .image .icons .cart-btn{
+    border-left: .1vw solid #fff7;
+    border-right: .1vw solid #fff7;
+    width:100%;
+}
+
+.Items .box-container .box .content{
+    padding:2vw;
+    text-align: center;
+}
+
+.Items .box-container .box .content h3{
+    font-size: 2.5vw;
+    color:#333;
+}
+
+.Items .box-container .box .content .price{
+    font-size: 2.5vw;
+    color:var(--orange);
+    font-weight: bold;
+    padding-top: 1vw;
+}
+
+    </style>
+
+</head>
+<body>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Shoopee</h3>
+        <span>Anything and everything! all of the time!</span>
+    </div>
+</section>
+<section class="Items" id="Items">
+
+    <h1 class="heading"><span>Products</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="ouch.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="cart-btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Matt Watson - OUCH!</h3>
+                <div class="price"> $4.99</div>
+            </div>
+        </div>
+                <div class="box">
+            <div class="image">
+                <img src="ouch.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="cart-btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Matt Watson - OUCH!</h3>
+                <div class="price"> $4.99</div>
+            </div>
+        </div>
+                <div class="box">
+            <div class="image">
+                <img src="ouch.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="cart-btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Matt Watson - OUCH!</h3>
+                <div class="price"> $4.99</div>
+            </div>
+        </div>
+                <div class="box">
+            <div class="image">
+                <img src="ouch.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="cart-btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Matt Watson - OUCH!</h3>
+                <div class="price"> $4.99</div>
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
